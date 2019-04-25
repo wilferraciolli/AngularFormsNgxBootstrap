@@ -1,7 +1,34 @@
 <h3>Angular ngxBootstrap</h3>
 <div class="container">
   <form>
+    <h4>Toggle example</h4>
+    <div class="form-group">
+      <!-- Toggle button -->
+      <button type="button"
+              class="btn" [class.btn-primary]="onOffSwitch === 'On'"
+              name="onOffSwitch"
+              [(ngModel)]="onOffSwitch" btnCheckbox
+              btnCheckboxTrue="On" btnCheckboxFalse="Off">
+        {{onOffSwitch}}
+      </button>
+    </div>
+
+    <h4>Group button example</h4>
+    <div class="form-group">
+      <!-- group button button -->
+      <pre class="card card-block card-header">{{radioModel || 'null'}}</pre>
+      <div class="btn-group">
+        <label class="btn btn-primary" name="leftButton" [(ngModel)]="radioModel"
+               btnRadio="Lefty" tabindex="0" role="button">Left</label>
+        <label class="btn btn-primary" name="middleButton" [(ngModel)]="radioModel"
+               btnRadio="Mid" tabindex="0" role="button">Middle</label>
+        <label class="btn btn-primary" name="rightButton" [(ngModel)]="radioModel"
+               btnRadio="Righty" tabindex="0" role="button">Right</label>
+      </div>
+    </div>
+
     <!-- Put the calendar onto a div to help with styling. It will default to current date -->
+    <h4>Date picker example</h4>
     <div class="form-group" style="display: inline-block">
       <input type="text"
              name="datePicker"

@@ -9,4 +9,6 @@ export class AppComponent {
 
   starDate: Date = new Date();
   startTime: Date = new Date();
+  onOffSwitch = 'On';
+  radioModel = 'Righty';
 }

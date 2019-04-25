@@ -6,13 +6,14 @@ import {AppComponent} from './app.component';
 import {AlertModule, BsDatepickerModule} from 'ngx-bootstrap';
 import {FormsModule} from '@angular/forms';
 import {TimepickerModule} from 'ngx-bootstrap/timepicker';
-import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import {ButtonsModule} from 'ngx-bootstrap/buttons';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    ButtonsModule.forRoot(),
     AlertModule.forRoot(),
     TimepickerModule.forRoot(),
     BsDatepickerModule.forRoot(),
