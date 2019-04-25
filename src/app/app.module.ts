@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {AlertModule, BsDatepickerModule} from 'ngx-bootstrap';
+import {AlertModule, BsDatepickerModule, RatingModule} from 'ngx-bootstrap';
 import {FormsModule} from '@angular/forms';
 import {TimepickerModule} from 'ngx-bootstrap/timepicker';
 import {ButtonsModule} from 'ngx-bootstrap/buttons';
@@ -13,6 +13,7 @@ import {ButtonsModule} from 'ngx-bootstrap/buttons';
     AppComponent
   ],
   imports: [
+    RatingModule.forRoot(),
     ButtonsModule.forRoot(),
     AlertModule.forRoot(),
     TimepickerModule.forRoot(),

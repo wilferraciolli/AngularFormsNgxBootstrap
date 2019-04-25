@@ -1,6 +1,24 @@
 <h3>Angular ngxBootstrap</h3>
 <div class="container">
   <form>
+    <!-- Rating template -->
+    <h4>Rating example</h4>
+    <div class="form-group">
+      <rating name="rating"
+              [(ngModel)]="rate"
+              [max]="max"
+              [readonly]="isReadonly"
+              (keyup)="confirmSelection($event)"
+              (onHover)="hover($event)"
+              (onLeave)="leave($event)" >
+      </rating>
+      <div class="card">
+        <pre class="card-block card-header"
+             style="margin:15px 0;">Rating: <b>{{rate}}</b>;  Readonly is: <i>{{isReadonly}}</i>;</pre>
+      </div>
+      <button class="btn btn-primary" (click)="resetStars()">Reset rating and status</button>
+    </div>
+
     <h4>Toggle example</h4>
     <div class="form-group">
       <!-- Toggle button -->
