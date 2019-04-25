@@ -1,29 +1,23 @@
-<h3>
-  Angular Seed
-</h3>
-<nav>
-	<a [routerLink]="['/']">
-    Home
-  </a>
-  |
-	<a [routerLink]="['/about']">
-    About
-  </a>
-  |
-	<a [routerLink]="['/github', 'angular']">
-    Github Repos
-  </a>
-  |
-	<a [routerLink]="['/contact']">
-    Contact Us
-  </a>
-</nav>
+<h3>Angular ngxBootstrap</h3>
+<div class="container">
+  <form>
+    <!-- Put the calendar onto a div to help with styling. It will default to current date -->
+    <div class="form-group" style="display: inline-block">
+      <input type="text"
+             name="datePicker"
+             [(ngModel)]="starDate"
+             placeholder="Pick a date"
+             class="form-control"
+             bsDatepicker>
+    </div>
 
-<main>
-	<router-outlet></router-outlet>
-</main>
+    <!-- Put the time onto a div to help with styling. It will default to current time -->
+    <div class="form-group">
+      <timepicker name="timePicker" [(ngModel)]="startTime" showSeconds="true"></timepicker>
+      <pre class="alert alert-info">Time is: {{startTime}}</pre>
+    </div>
+  </form>
+</div>
 
-
-<footer>
-  © 2017
-</footer>
+<h3>{{starDate}}</h3>
+<router-outlet></router-outlet>
